@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Odd Number Finder</title>
+</head>
+<body>
+    <h2>Find the Nearest Odd Number</h2>
+    <input type="number" id="userInput" placeholder="Enter a number">
+    <button onclick="findNearestOdd()">Find Nearest Odd</button>
+    <p id="result"></p>
+
+    <script>
+        function findNearestOdd() {
+            // Get the user's input and convert it to a number
+            let num = parseInt(document.getElementById("userInput").value);
+
+            // Check if the number is odd
+            if (num % 2 === 1 || num % 2 === -1) {
+                // If it's already odd, display it directly
+                document.getElementById("result").innerText = `The nearest odd number is: ${num}`;
+            } else {
+                // If it's even, display the nearest odd number below it
+                document.getElementById("result").innerText = `The nearest odd number is: ${num - 1}`;
+            }
+        }
+    </script>
+</body>
+</html>
