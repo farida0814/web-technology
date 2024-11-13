@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Operations</title>
+  <script>
+    // Function to find the exponential value
+    function findExponential(base, exponent) {
+      return Math.pow(base, exponent);
+    }
+
+    // Function to limit the number of digits after the decimal value
+    function limitDecimal(num, digits) {
+      return num.toFixed(digits);
+    }
+
+    // Function to convert a number to a string
+    function convertToString(num) {
+      return num.toString();
+    }
+
+    // Function to return negative infinity using Number object
+    function getNegativeInfinity() {
+      return Number.NEGATIVE_INFINITY;
+    }
+
+    // Event listener for the button click
+    function performOperations() {
+      // Get input values
+      const base = parseFloat(document.getElementById('base').value);
+      const exponent = parseFloat(document.getElementById('exponent').value);
+      const number = parseFloat(document.getElementById('number').value);
+      const digits = parseInt(document.getElementById('digits').value);
+
+      // Perform operations
+      const exponentialValue = findExponential(base, exponent);
+      const limitedDecimal = limitDecimal(number, digits);
+      const stringValue = convertToString(number);
+      const negativeInfinity = getNegativeInfinity();
+
+      // Display results
+      document.getElementById('result').innerHTML = `
+        <p>Exponential Value: ${exponentialValue}</p>
+        <p>Limited Decimal Value: ${limitedDecimal}</p>
+        <p>String Value: ${stringValue}</p>
+        <p>Negative Infinity: ${negativeInfinity}</p>
+      `;
+    }
+  </script>
+</head>
+<body>
+  <h1>JavaScript Number Operations</h1>
+  <label for="base">Base:</label>
+  <input type="number" id="base" placeholder="Enter base value"><br><br>
+
+  <label for="exponent">Exponent:</label>
+  <input type="number" id="exponent" placeholder="Enter exponent value"><br><br>
+
+  <label for="number">Number:</label>
+  <input type="number" id="number" placeholder="Enter a number"><br><br>
+
+  <label for="digits">Decimal places:</label>
+  <input type="number" id="digits" placeholder="Enter number of decimal places"><br><br>
+
+  <button onclick="performOperations()">Perform Operations</button>
+
+  <div id="result">
+    <!-- Results will be displayed here -->
+  </div>
+</body>
+</html>
