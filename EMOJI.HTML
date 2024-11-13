@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .emoji-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .emoji {
+            font-size: 50px; /* Fixed size for the emoji */
+            transition: transform 0.3s ease;
+        }
+        .emoji:hover {
+            transform: scale(1.2); /* Enlarges the emoji when hovered */
+        }
+        .emoji-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .emoji-container.fixed-position {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .emoji-container.absolute-position {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .emoji-container.relative-position {
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="emoji-container">
+        <div class="emoji-box">
+            <span class="emoji">😊</span>
+        </div>
+        <div class="emoji-box">
+            <span class="emoji">😎</span>
+        </div>
+        <div class="emoji-box">
+            <span class="emoji">😍</span>
+        </div>
+    </div>
+
+    <!-- Positioning examples -->
+    <div class="emoji-container fixed-position">
+        <div class="emoji-box">
+            <span class="emoji">😁</span>
+        </div>
+    </div>
+
+    <div class="emoji-container absolute-position">
+        <div class="emoji-box">
+            <span class="emoji">😂</span>
+        </div>
+    </div>
+
+    <div class="emoji-container relative-position">
+        <div class="emoji-box">
+            <span class="emoji">🤩</span>
+        </div>
+    </div>
+
+</body>
+</html>
