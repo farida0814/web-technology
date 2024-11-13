@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Positioning Demo</title>
+    <style>
+        /* Style for container */
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        /* Relative positioning for the outer box */
+        .box {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            background-color: #87CEFA;
+            position: relative;
+            top: 20px; /* Moves the box 20px down relative to the container */
+            left: 30px; /* Moves the box 30px to the right relative to the container */
+        }
+
+        /* Relative positioning for the inner box */
+        .inner-box {
+            width: 150px;
+            height: 100px;
+            padding: 10px;
+            background-color: #FF6347;
+            position: relative;
+            top: 10px; /* Moves the inner box 10px down relative to the outer box */
+            left: 15px; /* Moves the inner box 15px to the right relative to the outer box */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>This box is positioned relative to the parent container.</p>
+            <div class="inner-box">
+                <p>This inner box is positioned relative to the outer box.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
